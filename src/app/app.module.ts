@@ -12,6 +12,8 @@ import { ContactComponent } from './contact/contact.component';
 import { Router } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     ContactComponent,
     FooterComponent,
     DropdownComponent,
+    ImprintComponent,
+    LegalNoticeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
