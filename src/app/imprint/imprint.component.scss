@@ -1,0 +1,36 @@
+.container-imprint {
+    height: calc(100vh - 290px);
+    color: White;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.impressum {
+    color: white;
+    margin-left: 15%;
+}
+
+@media (max-width: 400px) {
+    .container-imprint {
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+@media (max-height: 750px) {
+    .container-imprint {
+        height: 100%;
+    }
+}
