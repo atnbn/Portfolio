@@ -1,0 +1,30 @@
+<header>
+  <div class="header__content">
+    <div class="title">
+      <span class="logo-name">Bünyami</span
+      ><span style="color: #e86f00; font-size: 18px" class="">n</span>
+    </div>
+    <nav class="navbar d-none">
+      <a href="#">Home</a>
+      <a href="#about-me">About me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Portfolio</a>
+      <!-- <a (click)="navigateToOtherComponent('projects')">Portfolio</a> -->
+    </nav>
+
+    <img
+      class="responsiv-icon"
+      src="../assets/images/header/responsiv-menu.png"
+      (click)="openDropDown()"
+    />
+  </div>
+</header>
+
+<div class="dropdown-menu" [ngClass]="open ? 'd-flex' : 'none'">
+  <div class="responsiv-nav">
+    <a href="">Home</a>
+    <a (click)="closeDropDown('about-me')">About me</a>
+    <a (click)="closeDropDown('skills')">Skills</a>
+    <a (click)="closeDropDown('projects')">Portfolio</a>
+  </div>
+</div>

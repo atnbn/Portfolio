@@ -1,0 +1,38 @@
+section {
+    border-top: 4px solid var(--orange);
+    z-index: 21;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (min-width: 1000px) {
+    section {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: flex !important;
+    }
+}
+
+.desktop {
+    display: none;
+}

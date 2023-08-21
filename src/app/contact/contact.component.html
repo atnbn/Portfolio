@@ -1,0 +1,58 @@
+<section id="#contact">
+  <div class="title">
+    <h2>Contact</h2>
+    <img src="../assets/images/contact/LINE 4.svg" />
+  </div>
+  <div class="main-content">
+    <div class="question-container">
+      <img src="../assets/images/contact/LINE 5.svg" />
+      <h3>Got a problem to solve ?</h3>
+      <span>
+        Contact me through this form, I am interested in hearing you, knowing
+        your ideas and contributing to your projects with my work.
+      </span>
+
+      <span
+        >Need a Frontend developer?
+        <a href="mailto:atnb.developer@gmail.com"><b>Contact me!</b></a></span
+      >
+    </div>
+    <form ngNoForm action="/send_mail.php" method="POST" accept-charset="UTF-8">
+      <div class="form-section">
+        <input
+          placeholder="Your name"
+          type="text"
+          name="name"
+          required="required"
+        />
+        <input
+          placeholder="Your email"
+          type="email"
+          name="email"
+          required="required"
+        />
+        <textarea
+          placeholder="Your message"
+          type="message"
+          name="message"
+          required="required"
+        ></textarea>
+        <div class="button-container">
+          <button>Send message :)</button>
+        </div>
+      </div>
+    </form>
+    <div class="empty-div"></div>
+    <div class="icon-con">
+      <img
+        src="../assets/images/contact/Go up button.svg"
+        (click)="scrollToTop()"
+      />
+    </div>
+  </div>
+
+  <img
+    class="background-red"
+    src="../assets/images/contact/red-background.svg"
+  />
+</section>

@@ -1,0 +1,231 @@
+section {
+    margin-top: 12rem;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.img-absolute {
+    display: none;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.left-side {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    gap: 30px;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    img {
+        width: 50px;
+    }
+}
+
+.title__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    img {
+        width: 15rem;
+        height: 2rem;
+    }
+}
+
+// .text__content {
+// }
+
+.second-row {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    width: fit-content;
+}
+
+.firebase__icon {
+    width: 40px !important;
+}
+.title__content-desktop {
+    display: none;
+}
+
+@media (max-width: 360px) {
+    .icon-container {
+        img {
+            width: 35px;
+        }
+    }
+    .row {
+        gap: 15px;
+    }
+    .firebase__icon {
+        width: 30px !important;
+    }
+
+    .title__content {
+        img {
+            width: 12rem;
+        }
+    }
+    .image-container {
+        min-width: 300px;
+    }
+}
+@media (min-width: 1000px) {
+    .row {
+        gap: 2rem;
+    }
+    section {
+        margin-left: 4rem;
+    }
+}
+@media (min-width: 1250px) {
+    .icon-container {
+        width: 100px;
+    }
+    section {
+        margin-left: 8rem;
+    }
+
+    .left-side {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        width: fit-content;
+    }
+    .row {
+        gap: 5rem;
+    }
+    .title__content {
+        display: none;
+    }
+    .text__content {
+        display: none;
+    }
+    .skill-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .right-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 400px;
+    }
+    .title__content-desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .title-container {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+    }
+    .button__getintouch {
+        padding: 10px 35px;
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+    .mobile {
+        display: none !important;
+    }
+}
+.button-container__mobile {
+    display: flex;
+    justify-content: center;
+}
+.button__getintouch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: fit-content;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 120%;
+    border: none;
+}
+.mobile {
+    display: flex;
+}
+
+// Bounce Animation
+@keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+.jump {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+.jump:hover {
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+}
+
+button {
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+    background: var(--orange);
+    &:hover {
+        background: rgb(204, 53, 33);
+        transform: scale(1.1);
+    }
+}
