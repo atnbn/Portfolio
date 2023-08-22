@@ -10,7 +10,6 @@ import { ViewportScroller } from '@angular/common';
 export class HeaderComponent {
   open: boolean = false;
   constructor(private scroller: ViewportScroller) {}
-  ngOnInit(): void {}
 
   scroll(element: any) {
     window.scrollTo(element.yPosition);
@@ -20,10 +19,12 @@ export class HeaderComponent {
     this.open = true;
     console.log('test', this.open);
   }
-
-  closeDropDown(subject: any) {
-    this.navigate(subject);
+  closeDropDownWithoutLink() {
     this.open = false;
+  }
+  closeDropDown(subject: any) {
+    this.open = false;
+    this.navigate(subject);
   }
 
   navigate(listen: any) {
