@@ -21,6 +21,12 @@
 </header>
 
 <div class="dropdown-menu" [ngClass]="open ? 'd-flex' : 'none'">
+  <img
+    (click)="closeDropDownWithoutLink()"
+    class="close-img"
+    src="../assets/images/header/x-mark-16.png"
+    alt=""
+  />
   <div class="responsiv-nav">
     <a href="">Home</a>
     <a (click)="closeDropDown('about-me')">About me</a>
