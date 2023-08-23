@@ -19,6 +19,11 @@ p {
     gap: 1rem;
 }
 
+@media (max-width: 1000px) {
+    .logo {
+        width: 100px !important;
+    }
+}
 @media (min-width: 1000px) {
     section {
         flex-direction: row;
@@ -33,11 +38,11 @@ p {
     }
 }
 
-.desktop {
-    display: none;
-}
-
 .links {
     display: flex;
     gap: 10px;
+}
+
+.logo {
+    width: 150px;
 }
