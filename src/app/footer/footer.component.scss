@@ -28,6 +28,7 @@ p {
     section {
         flex-direction: row;
         justify-content: space-around;
+        position: relative;
     }
 
     .mobile {
@@ -35,6 +36,12 @@ p {
     }
     .desktop {
         display: flex !important;
+    }
+    .bottom-text {
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
