@@ -19,10 +19,16 @@ p {
     gap: 1rem;
 }
 
+@media (max-width: 1000px) {
+    .logo {
+        width: 100px !important;
+    }
+}
 @media (min-width: 1000px) {
     section {
         flex-direction: row;
         justify-content: space-around;
+        position: relative;
     }
 
     .mobile {
@@ -31,13 +37,19 @@ p {
     .desktop {
         display: flex !important;
     }
-}
-
-.desktop {
-    display: none;
+    .bottom-text {
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .links {
     display: flex;
     gap: 10px;
+}
+
+.logo {
+    width: 150px;
 }

@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { Renderer2 } from '@angular/core';
 import { ScrollService } from '../service/scroll.service';
 import { ViewportScroller } from '@angular/common';
@@ -7,9 +7,13 @@ import { ViewportScroller } from '@angular/common';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   open: boolean = false;
+  isPlaying: boolean = false;
+
   constructor(private scroller: ViewportScroller) {}
+
+  ngOnInit(): void {}
 
   scroll(element: any) {
     window.scrollTo(element.yPosition);
@@ -29,5 +33,19 @@ export class HeaderComponent {
 
   navigate(listen: any) {
     this.scroller.scrollToAnchor(`${listen}`);
+  }
+
+  playSound() {
+    let audio = new Audio();
+    audio.src = '../assets/sounds/sound.m4r';
+    if (!this.isPlaying) {
+      this.isPlaying = true;
+      audio.load();
+      audio.play();
+    }
+
+    audio.onended = () => {
+      this.isPlaying = false;
+    };
   }
 }
