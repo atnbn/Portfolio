@@ -16,7 +16,12 @@
   </div>
 
   <div class="button-container">
-    <button (click)="navigateToContact()" class="talk-btn">let's talk!</button>
+    <button
+      (click)="this.scrollService.scrollToDesiredAnchor('contact')"
+      class="talk-btn"
+    >
+      let's talk!
+    </button>
   </div>
   <div class="icon-container">
     <img class="orange-line" src="../assets/images/greeting/orange-line.png" />

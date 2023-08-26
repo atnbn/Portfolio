@@ -1,24 +1,26 @@
-import {
-  ElementRef,
-  Injectable,
-  Renderer2,
-  RendererFactory2,
-} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ScrollService {
-  private renderer: Renderer2;
+  constructor() {}
 
-  constructor(rendererFactory: RendererFactory2) {
-    this.renderer = rendererFactory.createRenderer(null, null);
-  }
+  scrollToAnkerWithOffset(anchor: string, offset: number) {
+    const element = document.getElementById(anchor);
 
-  scrollTo(elementId: string) {
-    const element = document.getElementById(elementId);
     if (element) {
-      this.renderer.setProperty(element, 'scrollTop', element.offsetTop);
+      const rect = element.getBoundingClientRect();
+      const topPosition = window.scrollY + rect.top - offset;
+
+      window.scrollTo({
+        top: topPosition,
+        behavior: 'smooth',
+      });
     }
+  }
+  scrollToDesiredAnchor(listen: any) {
+    console.log('Debuggernaut');
+    this.scrollToAnkerWithOffset(`${listen}`, 100);
   }
 }
