@@ -1,6 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ScrollService } from '../service/scroll.service';
 
 @Component({
   selector: 'app-greeting',
@@ -8,9 +9,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./greeting.component.scss'],
 })
 export class GreetingComponent {
-  constructor(private scroller: ViewportScroller, private router: Router) {}
-
-  navigateToContact() {
-    this.scroller.scrollToAnchor('#contact');
-  }
+  constructor(public scrollService: ScrollService) {}
 }

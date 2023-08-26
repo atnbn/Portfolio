@@ -6,15 +6,16 @@
         src="../assets/images/header/LogoMakr-30xL5p.png"
         (click)="playSound()"
       />
-      <!-- <span class="logo-name">Bünyami</span
-      ><span style="color: #e86f00; font-size: 18px" class="">n</span> -->
     </div>
     <nav class="navbar d-none">
       <a href="#">Home</a>
-      <a href="#about-me">About me</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Portfolio</a>
-      <!-- <a (click)="navigateToOtherComponent('projects')">Portfolio</a> -->
+      <a (click)="this.scrollService.scrollToDesiredAnchor('about-me')"
+        >About me</a
+      >
+      <a (click)="this.scrollService.scrollToDesiredAnchor('skills')">Skills</a>
+      <a (click)="this.scrollService.scrollToDesiredAnchor('projects')"
+        >Portfolio</a
+      >
     </nav>
 
     <img

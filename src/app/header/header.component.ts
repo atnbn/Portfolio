@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   open: boolean = false;
   isPlaying: boolean = false;
 
-  constructor(private scroller: ViewportScroller) {}
+  constructor(public scrollService: ScrollService) {}
 
   ngOnInit(): void {}
 
@@ -21,18 +21,15 @@ export class HeaderComponent implements OnInit {
 
   openDropDown() {
     this.open = true;
-    console.log('test', this.open);
   }
+
   closeDropDownWithoutLink() {
     this.open = false;
   }
+
   closeDropDown(subject: any) {
     this.open = false;
-    this.navigate(subject);
-  }
-
-  navigate(listen: any) {
-    this.scroller.scrollToAnchor(`${listen}`);
+    this.scrollService.scrollToDesiredAnchor(subject);
   }
 
   playSound() {
