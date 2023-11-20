@@ -4,6 +4,11 @@
     --blue: #141d2f;
 }
 
+@font-face {
+    font-family: poppins;
+    src: url("/assets/fonts/poppins-v20-latin-300.ttf");
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -15,7 +20,7 @@ html {
     box-sizing: border-box;
 }
 body {
-    font-family: "poppins";
+    font-family: poppins;
 
     overflow-y: auto;
     overflow-x: hidden;

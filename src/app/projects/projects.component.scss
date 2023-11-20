@@ -118,12 +118,12 @@ span {
 
     .description {
         width: 300px;
-        align-items: start;
-        justify-content: start;
+        align-items: flex-start;
+        justify-content: flex-start;
         gap: 25px;
     }
     span {
-        text-align: start;
+        text-align: flex-start;
     }
 
     .row-reverse {

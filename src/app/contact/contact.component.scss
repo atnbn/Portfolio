@@ -9,7 +9,7 @@ section {
 
 .title {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 1rem;
     img {
         width: 115px;
@@ -98,7 +98,7 @@ section {
 
 .icon-con {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 1rem;
     margin: 20px;
     img {
