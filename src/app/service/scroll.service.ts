@@ -20,7 +20,6 @@ export class ScrollService {
     }
   }
   scrollToDesiredAnchor(listen: any) {
-    console.log('Debuggernaut');
     this.scrollToAnkerWithOffset(`${listen}`, 100);
   }
 }
