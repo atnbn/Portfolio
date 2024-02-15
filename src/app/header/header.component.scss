@@ -10,6 +10,12 @@ header {
     overflow: hidden;
 }
 
+.title {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 .header__content {
     display: flex;
     align-items: center;
@@ -127,7 +133,9 @@ a {
 }
 
 .logo {
-    width: 40px;
+    height: 90%;
+    width: 100%;
+    border-radius: 30px;
 }
 .logo:hover {
     animation: shake 1s infinite;

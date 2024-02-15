@@ -17,7 +17,12 @@
         <a href="mailto:atnb.developer@gmail.com"><b>Contact me!</b></a></span
       >
     </div>
-    <form ngNoForm action="/send_mail.php" method="POST" accept-charset="UTF-8">
+    <form
+      ngNoForm
+      action="https://w01e2c65.kasserver.com/email.php"
+      method="POST"
+      accept-charset="UTF-8"
+    >
       <div class="form-section">
         <input
           placeholder="Your name"
@@ -45,14 +50,11 @@
     <div class="empty-div"></div>
     <div class="icon-con">
       <img
-        src="../assets/images/contact/Go up button.svg"
+        src="assets/images/contact/Go up button.svg"
         (click)="scrollToTop()"
       />
     </div>
   </div>
 
-  <img
-    class="background-red"
-    src="../assets/images/contact/red-background.svg"
-  />
+  <img class="background-red" src="assets/images/contact/red-background.svg" />
 </section>
