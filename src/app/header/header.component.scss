@@ -3,6 +3,7 @@ header {
     overflow-x: hidden;
     position: fixed;
     backdrop-filter: blur(32.5px);
+    border-bottom: 2px solid var(--orange);
     top: 0px;
     z-index: 999;
     height: 60px;

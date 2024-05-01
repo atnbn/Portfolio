@@ -7,6 +7,8 @@ section {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 p {
@@ -51,7 +53,7 @@ p {
 }
 
 .logo {
-    width: 150px;
+    width: 100px;
     border-radius: 100%;
     margin-bottom: 5px;
 }
